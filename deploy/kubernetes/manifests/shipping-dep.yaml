@@ -1,5 +1,5 @@
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: shipping
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: shipping
-        image: weaveworksdemos/shipping:0.4.8
+        image: aholdusarbsdevtest.azurecr.io/shipping:0.4.9
         env:
          - name: ZIPKIN
            value: zipkin.jaeger.svc.cluster.local
